@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="navbar.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="mystyle.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+</head>
+<title> League Of Legends 151 </title>
+<!--<body> -->
+
+<body background="leagueWallpaper.jpeg" style="background-attachment: fixed; background-repeat: no-repeat;">
+    <!--<body background="leagueoflegends.gif">-->
+
+    <!-- Things to do:
+                
+        Build a database that can add, update and delete items
+        Figure out what tables you want to use
+        One with the league champions
+    
+
+        Add and delete work.  Working on updating
+        
+ -->
+    <style>
+
+    </style>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a role="button" class="navbar-brand" onClick="index.html">  <img src="icon-game-lol.png" alt="..."></a>
+
+            </div>
+             <ul class="nav navbar-nav">
+              <li><a href="http://gameinfo.na.leagueoflegends.com/en/game-info/" role="button" aria-haspopup="true" aria-expanded="false">Game Info</a></li>
+             </ul>
+             <ul class="nav navbar-nav">
+              <li><a href="http://na.leagueoflegends.com/en/news/" role="button" aria-haspopup="true" aria-expanded="false">News</a></li>
+             </ul>
+             <ul class="nav navbar-nav">
+              <li><a href="http://www.lolesports.com/en_US" role="button" aria-haspopup="true" aria-expanded="false">Esports</a></li>
+             </ul>
+             <ul class="nav navbar-nav">
+              <li><a href="https://www.twitch.tv/riotgames" role="button" aria-haspopup="true" aria-expanded="false">Twitch Stream</a></li>
+             </ul>  
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.youtube.com/user/RiotGamesInc" role="button" aria-haspopup="true" aria-expanded="false">YouTube Channel</a></li>
+             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a href="userPage.php">Champion Table</a> </li>
+                <li>
+                    <p class="navbar-text">Already have an account?</p>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login.php" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Username</label>
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                            <!--     <div class="help-block text-right"><a href="">Forget the password ?</a></div> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" name ="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                        <!-- <div class="checkbox">
+                                             <label>
+                                             <input type="checkbox"> keep me logged-in
+                                             </label>
+                                        </div> -->
+                                    </form>
+                                </div>
+                               <!-- <div class="bottom text-center">
+                                    New here? <a href="#"><b>Sign Up Now!</b></a>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+        <div class="navbar-toggler animate">
+            <span class="menu-icon "></span>
+        </div>
+        <ul class="navbar-menu animate">
+            <li>
+                <a href="index.html" class="animate">
+                    <span class="desc animate"> Login Page </span>
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+            </li>
+            <li>
+                <a href="userPage.php" class="animate">
+                    <span class="desc animate"> Champion Page </span>
+                    <span class="glyphicon glyphicon-th-list"></span>
+                </a>
+            </li>
+            <li>
+        <a  href = "logout.php" class="animate">
+          <span class="desc animate" > Log Out </span>
+          <span class="glyphicon glyphicon-off"></span>
+        </a>
+      </li>
+            <li>
+                <a href="index.html" class="animate">
+                    <span class="desc animate"> Nothing at the moment lol. Pls gib me 100%. </span>
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="homeContainer">
+        <div id="carouselChange">
+            <div id="slideshow" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="http://www.surrenderat20.net/2016/05/champion-reveal-taliyah-stoneweaver.html#more">
+                            <img src="taliyah.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Taliyah, the Stoneweaver</h3>
+                                <p> The champion reveal for our upcoming champion Taliyah, the Stoneweaver is out! </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://www.surrenderat20.net/2016/04/patch-68-taric-champion-update.html#more">
+                            <img src="taric.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Taric, The Shield Of Valoran</h3>
+                                <p> "The climb may be long, but the view is worth it." </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://www.surrenderat20.net/2016/03/champion-reveal-aurelion-sol-star-forger.html#more">
+                            <img src="aurelion-sol-wallpaper.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Aurelion Sol, the Star Forger</h3>
+                                <p> "Aurelion Sol is mere weeks from his Rift debut, and he's bringing one hell of a big bang along for his grand entrance. He’s a medium range mage who deals devastating sustained area of effect damage with his orbiting stars. And when he’s got somewhere to be, the Star Forger can take to the skies, flying over terrain while nurturing his very own fledgling apocalypse. "  </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href ="http://www.surrenderat20.net/2016/04/program-lissandra-and-soraka-now.html#more">
+                            <img src="article.header.cyber_en.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Program Lissandra & Soraka now available!</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#slideshow" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#slideshow" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <br>
+            <div class="guides">
+                <figure class="figure">
+                   <a href = "http://www.mobafire.com/" ><img src="guides.PNG" class="figure-img img-fluid img-thumbnail" alt=""> </a>
+                    <figcaption class="figure-caption" >Mobafire Guides.</figcaption>
+                </figure>
+            </div>
+            <div class="links">
+            </div>
+        </div>
+    </div>
+    <!-- <button id="testButton">Change</button>
+    <p id="test"> Hi </p> -->
+</body>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+/*
+    So I know that the jquery from bootstrap is sufficient enough for this website so far
+*/
+
+/*    document.getElementById("userAccepted").onclick = function () {
+        location.href = "userPage.php";
+    }; */
+
+
+
+$(document).ready(function() {
+
+    $('#userAccepted').click(function() {
+
+    });
+    $('#testButton').click(function() {
+        console.log("test");
+        $('#test').html('Works');
+    });
+    $('#slideshow').carousel({
+        interval: 2500
+    });
+
+});
+$(function() {
+
+
+    $('.navbar-toggler').on('click', function(event) {
+        event.preventDefault();
+        $(this).closest('.navbar-minimal').toggleClass('open');
+    })
+});
+</script>
+
+</html>
